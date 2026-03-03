@@ -3,189 +3,377 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muthu Selvam | AI Engineer</title>
+<title>Muthu Selvam | AI Systems Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#0f0f0f;
-color:#f1f1f1;
-line-height:1.6;
-scroll-behavior:smooth;
+    font-family:'Inter',sans-serif;
+    background:#0f1117;
+    color:#e6edf3;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
 section{
-padding:80px 10%;
+    padding:90px 0;
 }
 
-h1{
-font-size:3rem;
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:#0f1117;
+    padding:15px 0;
+    border-bottom:1px solid #1f2937;
+    z-index:1000;
 }
 
-h2{
-margin-bottom:20px;
-color:#00f5c4;
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    list-style:none;
 }
 
-p{
-color:#cccccc;
+nav a{
+    color:#9ca3af;
+    text-decoration:none;
+    font-size:14px;
 }
+
+nav a:hover{
+    color:#00f5d4;
+}
+
+/* HERO */
 
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
-animation:fadeIn 1.2s ease-in;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+    margin-top:80px;
 }
 
 .hero-text{
-max-width:600px;
+    width:55%;
 }
 
-.hero img{
-width:260px;
-height:260px;
-object-fit:cover;
-border-radius:50%;
-border:4px solid #00f5c4;
-box-shadow:0 0 25px rgba(0,245,196,0.4);
+.hero-text h1{
+    font-size:3rem;
+    margin-bottom:15px;
 }
 
-.buttons{
-margin-top:25px;
+.hero-text h2{
+    font-weight:400;
+    color:#00f5d4;
+    margin-bottom:20px;
 }
 
-.buttons a{
-text-decoration:none;
-padding:12px 25px;
-margin-right:15px;
-border-radius:30px;
-background:#00f5c4;
-color:#000;
-font-weight:bold;
-transition:0.3s;
+.hero-text p{
+    color:#9ca3af;
+    margin-bottom:25px;
 }
 
-.buttons a:hover{
-background:#00cfa5;
+.hero-buttons a{
+    display:inline-block;
+    padding:10px 18px;
+    margin-right:15px;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+    border:1px solid #00f5d4;
+    color:#00f5d4;
+    transition:0.3s;
 }
 
-.card{
-background:#1a1a1a;
-padding:25px;
-margin-bottom:20px;
-border-radius:15px;
-transition:0.3s;
+.hero-buttons a:hover{
+    background:#00f5d4;
+    color:#0f1117;
 }
 
-.card:hover{
-transform:translateY(-8px);
+.hero-image{
+    width:40%;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:8px;
+    box-shadow:0 0 40px rgba(0,255,212,0.2);
+}
+
+/* SECTION TITLES */
+
+section h2{
+    font-size:2rem;
+    margin-bottom:40px;
+    color:#00f5d4;
+}
+
+/* PROJECT CARDS */
+
+.project{
+    background:#161b22;
+    padding:25px;
+    border-radius:8px;
+    margin-bottom:30px;
+    border:1px solid #1f2937;
+    transition:0.3s;
+}
+
+.project:hover{
+    border-color:#00f5d4;
+    transform:translateY(-5px);
+}
+
+.project h3{
+    margin-bottom:10px;
+}
+
+.project p{
+    font-size:14px;
+    color:#9ca3af;
+    margin-bottom:8px;
+}
+
+.project a{
+    color:#00f5d4;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* SKILLS GRID */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.skill-box{
+    background:#161b22;
+    padding:20px;
+    border-radius:8px;
+    border:1px solid #1f2937;
+}
+
+/* CERTIFICATIONS */
+
+.cert-list{
+    line-height:2;
+    color:#9ca3af;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#00f5d4;
+    text-decoration:none;
 }
 
 footer{
-text-align:center;
-padding:30px;
-background:#0a0a0a;
-color:#777;
+    text-align:center;
+    padding:40px 0;
+    border-top:1px solid #1f2937;
+    color:#6b7280;
 }
 
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
+/* RESPONSIVE */
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-text,.hero-image{
+        width:100%;
+    }
+    .hero-image{
+        margin-top:40px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero">
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
 <div class="hero-text">
-<h1>Muthu Selvam S</h1>
-<h2>AI & Machine Learning Engineer</h2>
+<h1>Muthu Selvam</h1>
+<h2>AI Systems Engineer | LLM Architect | Deep Learning Researcher</h2>
 <p>
-AI & Machine Learning Engineer specializing in LLM Systems,
-Intelligent Architectures and Research-Driven AI.
-I design production-oriented AI systems combining Machine Learning,
-Deep Learning and Generative AI for real-world applications.
+Electrical & Electronics Engineer turned AI Engineer. 
+Specialized in LSTM Optimization, Retrieval-Augmented Generation (RAG), 
+Multi-Agent AI Systems, and Instruction Fine-Tuning using LoRA.
 </p>
 
-<div class="buttons">
-<a href="https://github.com/MUTHUSELVAM25" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/muthu-selvam-359318250" target="_blank">LinkedIn</a>
+<div class="hero-buttons">
+<a href="#projects">View Projects</a>
+<a href="#research">Research Paper</a>
 </div>
 </div>
 
-<div>
+<div class="hero-image">
 <img src="profile.jpg" alt="Muthu Selvam">
 </div>
-</section>
+</div>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
 <h2>About Me</h2>
 <p>
-AI & Machine Learning Engineer with a strong engineering foundation and research mindset.
-Published researcher in ACO-Optimized LSTM forecasting models and builder of advanced
-LLM systems including RAG pipelines and multi-agent architectures.
-Focused on bridging research concepts with deployable AI solutions.
+Bachelor of Engineering in Electrical & Electronics Engineering from 
+St. Joseph’s Institute of Technology. Transitioned into Artificial Intelligence 
+through applied Machine Learning, Deep Learning, and Large Language Model systems.
 </p>
 </section>
 
-<section>
-<h2>Core Expertise</h2>
+<!-- RESEARCH -->
+<section id="research">
+<h2>Research & Publication</h2>
 
-<div class="card">
-<h3>Machine Learning</h3>
-<p>Regression, Classification, Feature Engineering, Hyperparameter Optimization, Scikit-learn, XGBoost</p>
-</div>
-
-<div class="card">
-<h3>Deep Learning</h3>
-<p>PyTorch, CNN, LSTM, Transfer Learning, Time-Series Forecasting</p>
-</div>
-
-<div class="card">
-<h3>Generative AI & LLM Systems</h3>
-<p>RAG Pipelines, LangChain, LangGraph, Multi-Agent Systems, LoRA Fine-Tuning, LLaMA 2, Ollama</p>
+<div class="project">
+<h3>Optimized LSTM Model for Day-Ahead Solar Power Prediction using ACO</h3>
+<p><strong>Published:</strong> International Research Journal on Advanced Engineering Hub (March 2025)</p>
+<p><strong>Contribution:</strong> Hyperparameter optimization of LSTM using Ant Colony Optimization for seasonal solar forecasting.</p>
+<p><strong>Best Performance:</strong> MAE: 0.22 kW | RMSE: 0.26 kW | R²: 0.93</p>
 </div>
 
 </section>
 
-<section>
-<h2>Featured Projects</h2>
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Selected AI Projects</h2>
 
-<div class="card">
-<h3>Company RAG Assistant</h3>
-<p>Built an intelligent document-based QA system using Retrieval-Augmented Generation.</p>
+<div class="project">
+<h3>Business Reputation Insights Analyzer (LLM + RAG)</h3>
+<p>Problem → Analyze Google Maps reviews for business insights.</p>
+<p>Tools → Python, LangChain, RAG, LLM APIs</p>
+<a href="https://github.com/MUTHUSELVAM25/Business-Reputation-Insights-Analyzer-Google-Maps-Reviews-LLMs.git" target="_blank">GitHub Link</a>
 </div>
 
-<div class="card">
-<h3>Instruction Fine-Tuned LLM</h3>
-<p>Fine-tuned a large language model using LoRA and parameter-efficient training methods.</p>
+<div class="project">
+<h3>Multi AI Agents using LangGraph</h3>
+<p>Built collaborative AI agents performing structured reasoning tasks.</p>
+<a href="https://github.com/MUTHUSELVAM25/Multi-AI-Agents-using-LangGraph.git" target="_blank">GitHub Link</a>
 </div>
 
-<div class="card">
-<h3>ACO-Optimized LSTM Research</h3>
-<p>Published research improving solar forecasting accuracy using metaheuristic optimization.</p>
+<div class="project">
+<h3>Instruction Fine-Tuned LLM using LoRA (PEFT)</h3>
+<p>Fine-tuned open-source LLM using parameter-efficient techniques.</p>
+<a href="https://github.com/MUTHUSELVAM25/Instruction-Fine-Tuned-LLM-using-LoRA-PEFT-.git" target="_blank">GitHub Link</a>
 </div>
+
+<div class="project">
+<h3>Brain Tumor MRI Image Classification</h3>
+<p>Deep Learning CNN model for medical imaging classification.</p>
+<a href="https://github.com/MUTHUSELVAM25/Brain-Tumor-MRI-Image-Classification-.git" target="_blank">GitHub Link</a>
+</div>
+
+<!-- Add remaining projects similarly -->
 
 </section>
 
+<!-- SKILLS -->
+<section id="skills">
+<h2>Technical Architecture</h2>
+
+<div class="skills-grid">
+
+<div class="skill-box">
+<h4>AI Core</h4>
+Machine Learning<br>
+Deep Learning<br>
+Time-Series Forecasting<br>
+Hyperparameter Optimization
+</div>
+
+<div class="skill-box">
+<h4>LLM Systems</h4>
+LangChain<br>
+LangGraph<br>
+RAG<br>
+LoRA (PEFT)<br>
+Multi-Agent Systems
+</div>
+
+<div class="skill-box">
+<h4>Data & Analytics</h4>
+Pandas<br>
+Power BI<br>
+MySQL<br>
+Data Visualization
+</div>
+
+<div class="skill-box">
+<h4>Deployment</h4>
+Streamlit<br>
+AWS<br>
+GitHub<br>
+API Integration
+</div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
 <section>
+<h2>Certifications</h2>
+<div class="cert-list">
+Master Data Science – GUVI<br>
+Deep Learning using PyTorch<br>
+Machine Learning on AWS<br>
+Natural Language Processing using Python<br>
+Data Analytics using Pandas<br>
+Power BI<br>
+Advanced Professional Certification – NSDC Skill India
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
 <h2>Contact</h2>
-<p>Email: muthuselvam25042003@gmail.com</p>
+<p>Email: <a href="mailto:muthuselvam25042003@gmail.com">muthuselvam25042003@gmail.com</a></p>
+<p>GitHub: <a href="https://github.com/MUTHUSELVAM25" target="_blank">github.com/MUTHUSELVAM25</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/muthu-selvam-359318250" target="_blank">linkedin.com/in/muthu-selvam-359318250</a></p>
 </section>
 
 <footer>
-© 2025 Muthu Selvam S | AI Engineer Portfolio
+© 2026 Muthu Selvam | AI Systems Portfolio
 </footer>
 
+</div>
 </body>
 </html>
