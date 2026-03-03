@@ -291,18 +291,61 @@ h2{
     
 /* RESEARCH */
 
-.research-box{
-    max-width:900px;
-    margin:auto;
-    background:#111827;
-    padding:30px;
-    border-radius:15px;
-    border:1px solid rgba(255,255,255,0.05);
-    transition:0.4s;
+/* RESEARCH SECTION */
+
+.research-list{
+    margin-top:50px;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
 }
 
-.research-box:hover{
-    box-shadow:0 0 30px rgba(139,92,246,0.4);
+.research-card{
+    position:relative;
+    background:linear-gradient(145deg,#0f172a,#111c35);
+    padding:40px 50px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.4s ease;
+}
+
+.research-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 40px rgba(139,92,246,0.35);
+}
+
+.research-card h3{
+    font-size:23px;
+    margin-bottom:15px;
+    color:#60a5fa;
+}
+
+.research-summary{
+    color:#cbd5e1;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.research-details p{
+    color:#94a3b8;
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+/* Notion Icon */
+
+.notion-icon{
+    position:absolute;
+    top:25px;
+    right:30px;
+    font-size:20px;
+    color:#cbd5e1;
+    transition:0.3s;
+}
+
+.notion-icon:hover{
+    color:#8b5cf6;
+    transform:scale(1.2);
 }
 
 /* CONTACT */
@@ -563,13 +606,78 @@ Alongside research, I actively build production-oriented AI systems including RA
 </section>
      
 <!-- RESEARCH -->
+
 <section id="research" class="fade-in">
-<h2>Research <span class="highlight">Publication</span></h2>
-<div class="research-box">
-Optimized LSTM Model for Day-Ahead Solar Power Prediction using ACO.
-Published March 2025.
-</div>
-</section>
+    <h2>Research <span class="highlight">Publications</span></h2>
+
+    <div class="research-list">
+
+        <!-- CASE STUDY 3 -->
+        <div class="research-card">
+            <a href="https://www.notion.so/CASE-STUDY-3-2057fae62cad8095a1dfec901e2a124d?source=copy_link" 
+               target="_blank" class="notion-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </a>
+
+            <h3>Optimized LSTM for Day-Ahead Solar Power Forecasting using ACO</h3>
+
+            <p class="research-summary">
+                Designed a deep learning-based solar power forecasting system using LSTM, enhanced 
+                through Ant Colony Optimization (ACO) for hyperparameter tuning. 
+                Built using 8,000+ real-world PV records across multiple seasons.
+            </p>
+
+            <div class="research-details">
+                <p><strong>Core Focus:</strong> Time-Series Forecasting, Metaheuristic Optimization</p>
+                <p><strong>Tech Stack:</strong> Python, LSTM, ACO, MAE/RMSE/R² Metrics</p>
+                <p><strong>Key Result:</strong> Achieved R² up to 0.93 with improved seasonal accuracy over baseline & PSO models.</p>
+            </div>
+        </div>
+
+        <!-- CASE STUDY 2 -->
+        <div class="research-card">
+            <a href="https://www.notion.so/CASE-STUDY-2-1c07fae62cad80109140c1c85c4855e0?source=copy_link" 
+               target="_blank" class="notion-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </a>
+
+            <h3>AI & IoT-Based Transformer Predictive Maintenance Framework</h3>
+
+            <p class="research-summary">
+                Proposed an enterprise-grade predictive maintenance architecture integrating 
+                IoT sensors, AI anomaly detection, cloud computing, and automated ticketing systems.
+            </p>
+
+            <div class="research-details">
+                <p><strong>Core Focus:</strong> Industrial AI, IoT Integration, Predictive Analytics</p>
+                <p><strong>Technologies:</strong> ML Models, Zoho Analytics, IoT APIs, Cloud Platforms</p>
+                <p><strong>Business Impact:</strong> Estimated 30% downtime reduction & 20% maintenance cost savings.</p>
+            </div>
+        </div>
+
+        <!-- CASE STUDY 1 -->
+        <div class="research-card">
+            <a href="https://www.notion.so/CASE-STUDY-1-1bd7fae62cad8050ac02dcac8db13092?source=copy_link" 
+               target="_blank" class="notion-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </a>
+
+            <h3>AI-Based Transformer Predictive Maintenance – Bridging EE & IT</h3>
+
+            <p class="research-summary">
+                Developed an AI-powered transformer health monitoring architecture 
+                combining IoT, cloud computing, and machine learning for proactive failure prediction.
+            </p>
+
+            <div class="research-details">
+                <p><strong>Core Focus:</strong> Industry 4.0, Cloud AI Systems</p>
+                <p><strong>Models Explored:</strong> Random Forest, LSTM, SVM</p>
+                <p><strong>Impact Projection:</strong> 50% downtime reduction & scalable SaaS deployment potential.</p>
+            </div>
+        </div>
+
+    </div>
+</section>     
 
 <!-- CONTACT -->
 <section id="contact" class="contact-section fade-in">
