@@ -352,70 +352,39 @@ h2{
 
 /* CONTACT */
 
-.contact-section{
-    background:linear-gradient(135deg,#0f172a,#111827);
-}
-
-.contact-title{
-    text-align:center;
-    font-size:2.5rem;
-}
-
-.contact-title span{
-    background:linear-gradient(90deg,#8b5cf6,#3b82f6);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.contact-sub{
-    text-align:center;
+.contact-label{
+    font-size:13px;
     color:#94a3b8;
-    margin-bottom:50px;
+    margin-top:15px;
 }
 
-.contact-box{
-    display:flex;
-    gap:40px;
-    background:rgba(255,255,255,0.05);
-    padding:40px;
-    border-radius:20px;
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,0.08);
-}
-
-.contact-info{
-    width:40%;
-}
-
-.contact-form{
-    width:60%;
-    display:flex;
-    flex-direction:column;
-}
-
-.contact-form input,
-.contact-form textarea{
-    background:#1f2937;
-    border:1px solid #374151;
-    padding:12px;
+.contact-value{
+    font-size:16px;
     margin-bottom:15px;
-    border-radius:8px;
-    color:white;
 }
 
-.contact-form button{
-    background:linear-gradient(90deg,#8b5cf6,#3b82f6);
-    border:none;
-    padding:14px;
-    border-radius:10px;
-    color:white;
-    font-weight:600;
-    cursor:pointer;
+.social-icons{
+    margin-top:20px;
+    display:flex;
+    gap:18px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    background:rgba(139,92,246,0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    color:#8b5cf6;
+    font-size:18px;
     transition:0.3s;
 }
 
-.contact-form button:hover{
-    box-shadow:0 0 30px rgba(139,92,246,0.6);
+.social-icons a:hover{
+    background:#8b5cf6;
+    color:white;
     transform:translateY(-4px);
 }
 
@@ -683,43 +652,32 @@ Alongside research, I actively build production-oriented AI systems including RA
 </section>     
 
 <!-- CONTACT -->
-<section id="contact" class="contact-section fade-in">
-<h2 class="contact-title">Let’s work <span>together</span></h2>
-<p class="contact-sub">
-Open to AI Engineering & Research opportunities.
-</p>
 
-<div class="contact-box">
 <div class="contact-info">
-<p>Email: muthuselvam25042003@gmail.com</p>
-<p>Location: Chennai, Tamil Nadu</p>
+
+<p class="contact-label">EMAIL</p>
+<p class="contact-value">muthuselvam25042003@gmail.com</p>
+
+<p class="contact-label">LOCATION</p>
+<p class="contact-value">Chennai, Tamil Nadu</p>
+
+<div class="social-icons">
+
+<a href="mailto:muthuselvam25042003@gmail.com" target="_blank">
+    <i class="fa-solid fa-envelope"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/muthu-selvam-359318250" target="_blank">
+    <i class="fab fa-linkedin-in"></i>
+</a>
+
+<a href="https://github.com/MUTHUSELVAM25" target="_blank">
+    <i class="fab fa-github"></i>
+</a>
+
 </div>
 
-<form class="contact-form">
-<input type="text" placeholder="Name *" required>
-<input type="email" placeholder="Email *" required>
-<textarea rows="5" placeholder="Message *" required></textarea>
-<button type="submit">Send Message →</button>
-</form>
-</div>
-</section>
-
-<script>
-const faders=document.querySelectorAll('.fade-in');
-const appearOptions={threshold:0.2};
-
-const appearOnScroll=new IntersectionObserver(function(entries,appearOnScroll){
-entries.forEach(entry=>{
-if(!entry.isIntersecting) return;
-entry.target.classList.add('show');
-appearOnScroll.unobserve(entry.target);
-});
-},appearOptions);
-
-faders.forEach(fader=>{
-appearOnScroll.observe(fader);
-});
-</script>
-
-</body>
-</html>
+</div>    
+</section> 
+    
+    
