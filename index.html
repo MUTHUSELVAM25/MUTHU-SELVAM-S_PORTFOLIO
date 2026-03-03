@@ -234,50 +234,50 @@ h2{
 .skill-box strong{
     font-size:18px;
 }
-    
-/* PROJECTS */
 
 /* PROJECTS */
 
-.projects-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:35px;
+/* PROJECTS RECTANGLE STYLE */
+
+.project-list{
     margin-top:50px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
 }
 
-.project-card{
+.project-row{
     position:relative;
     background:linear-gradient(145deg,#0f172a,#111c35);
-    padding:30px;
-    border-radius:18px;
+    padding:30px 40px;
+    border-radius:20px;
     border:1px solid rgba(255,255,255,0.05);
     transition:0.4s ease;
 }
 
-.project-card:hover{
-    transform:translateY(-8px);
+.project-row:hover{
+    transform:translateY(-6px);
     box-shadow:0 0 35px rgba(139,92,246,0.4);
 }
 
-.project-card h3{
-    font-size:20px;
-    margin-bottom:15px;
+.project-row h3{
+    font-size:22px;
+    margin-bottom:12px;
     color:#60a5fa;
 }
 
-.project-card p{
+.project-row p{
     color:#94a3b8;
-    line-height:1.7;
     font-size:15px;
+    line-height:1.7;
 }
 
-/* GitHub Icon Top Right */
+/* GitHub icon top right */
 
 .github-icon{
     position:absolute;
-    top:18px;
-    right:18px;
+    top:22px;
+    right:25px;
     font-size:22px;
     color:#cbd5e1;
     transition:0.3s;
@@ -509,10 +509,9 @@ Alongside research, I actively build production-oriented AI systems including RA
 <section id="projects" class="fade-in">
     <h2>Top <span class="highlight">Projects</span></h2>
 
-    <div class="projects-container">
+    <div class="project-list">
 
-        <!-- 1 -->
-        <div class="project-card">
+        <div class="project-row">
             <a href="https://github.com/MUTHUSELVAM25/Business-Reputation-Insights-Analyzer-Google-Maps-Reviews-LLMs.git" target="_blank" class="github-icon">
                 <i class="fab fa-github"></i>
             </a>
@@ -520,8 +519,7 @@ Alongside research, I actively build production-oriented AI systems including RA
             <p>LLM-powered RAG system for intelligent Google Reviews analysis and business sentiment insights.</p>
         </div>
 
-        <!-- 2 -->
-        <div class="project-card">
+        <div class="project-row">
             <a href="https://github.com/MUTHUSELVAM25/Company-RAG-Assistant-Intelligent-Document-QA.git" target="_blank" class="github-icon">
                 <i class="fab fa-github"></i>
             </a>
@@ -529,17 +527,15 @@ Alongside research, I actively build production-oriented AI systems including RA
             <p>Enterprise-grade Retrieval-Augmented Generation assistant for intelligent document-based question answering.</p>
         </div>
 
-        <!-- 3 -->
-        <div class="project-card">
+        <div class="project-row">
             <a href="https://github.com/MUTHUSELVAM25/Multi-AI-Agents-using-LangGraph.git" target="_blank" class="github-icon">
                 <i class="fab fa-github"></i>
             </a>
             <h3>Multi-AI Agents using LangGraph</h3>
-            <p>Collaborative multi-agent AI workflow system built using LangGraph for modular AI task orchestration.</p>
+            <p>Collaborative multi-agent AI workflow system built using LangGraph for modular AI orchestration.</p>
         </div>
 
-        <!-- 4 -->
-        <div class="project-card">
+        <div class="project-row">
             <a href="https://github.com/MUTHUSELVAM25/Instruction-Fine-Tuned-LLM-using-LoRA-PEFT-.git" target="_blank" class="github-icon">
                 <i class="fab fa-github"></i>
             </a>
@@ -547,8 +543,7 @@ Alongside research, I actively build production-oriented AI systems including RA
             <p>Parameter-efficient fine-tuned large language model using LoRA and PEFT techniques.</p>
         </div>
 
-        <!-- 5 -->
-        <div class="project-card">
+        <div class="project-row">
             <a href="https://github.com/MUTHUSELVAM25/Weather-MCP-Agent-Real-Time-AI-Tool-Integration-with-FastMCP-Claude.git" target="_blank" class="github-icon">
                 <i class="fab fa-github"></i>
             </a>
@@ -556,8 +551,7 @@ Alongside research, I actively build production-oriented AI systems including RA
             <p>Real-time AI weather agent integrating FastMCP and Claude for contextual forecasting and tool-based interaction.</p>
         </div>
 
-        <!-- 6 -->
-        <div class="project-card">
+        <div class="project-row">
             <a href="https://github.com/MUTHUSELVAM25/Brain-Tumor-MRI-Image-Classification-.git" target="_blank" class="github-icon">
                 <i class="fab fa-github"></i>
             </a>
