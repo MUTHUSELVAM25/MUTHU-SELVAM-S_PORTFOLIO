@@ -74,6 +74,7 @@ nav ul li a:hover{
     justify-content:space-between;
     align-items:center;
     padding:80px 8% 40px 8%;
+    gap:40px;          /* adds balanced space between text and image */
 }
     
 .hero-text{
@@ -138,10 +139,12 @@ nav ul li a:hover{
 
 .hero-image{
     width:40%;
+    display:flex;
+    justify-content:flex-end;   /* pushes image to right side */
 }
 
 .hero-image img{
-    max-height:80vh;          /* 🔥 prevents vertical overflow */
+    max-height:78vh;          /* 🔥 prevents vertical overflow */
     width:auto;               /* keeps aspect ratio */
     max-width:100%;
     border-radius:15px;
