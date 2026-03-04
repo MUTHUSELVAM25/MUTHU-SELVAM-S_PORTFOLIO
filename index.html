@@ -66,6 +66,7 @@ nav ul li a:hover{
     color:#8b5cf6;
 }
 
+
 /* HERO SECTION */
 
 .hero{
@@ -74,26 +75,23 @@ nav ul li a:hover{
     justify-content:space-between;
     align-items:center;
     padding:80px 8% 40px 8%;
-    gap:40px;          /* adds balanced space between text and image */
-}
-    
-.hero-text{
-    width:55%;
+    gap:60px;   /* space between text and image */
 }
 
+/* HERO TEXT */
+
 .hero-text{
-    width:55%;
+    width:52%;
     margin-top:15px;
 }
 
 .hero-text h1{
-    font-size:3.1rem;   /* Bigger Name */
+    font-size:3.1rem;
     margin-bottom:15px;
 }
 
-    
 .hero-text h2{
-    font-size:2rem;   /* Smaller than name */
+    font-size:2rem;
     font-weight:400;
     margin-bottom:20px;
     background:linear-gradient(90deg,#8b5cf6,#3b82f6);
@@ -106,6 +104,8 @@ nav ul li a:hover{
     line-height:1.8;
     margin-bottom:30px;
 }
+
+/* HERO BUTTONS */
 
 .hero-buttons a{
     display:inline-block;
@@ -137,20 +137,21 @@ nav ul li a:hover{
     color:white;
 }
 
+/* HERO IMAGE */
+
 .hero-image{
     width:40%;
     display:flex;
-    justify-content:flex-end;   /* pushes image to right side */
+    justify-content:flex-end;
 }
 
 .hero-image img{
-    max-height:78vh;          /* 🔥 prevents vertical overflow */
-    width:auto;               /* keeps aspect ratio */
-    max-width:100%;
+    width:100%;
+    max-height:78vh;
+    object-fit:cover;
     border-radius:15px;
     box-shadow:0 0 40px rgba(139,92,246,0.4);
     transition:0.4s;
-    object-fit:cover;
 }
 
 .hero-image img:hover{
