@@ -566,6 +566,57 @@ nav ul li a{
 }
 
 }    
+
+
+/* HAMBURGER MENU */
+
+.menu-icon{
+display:none;
+font-size:24px;
+color:white;
+cursor:pointer;
+}
+
+/* MOBILE MENU */
+
+@media(max-width:768px){
+
+nav{
+justify-content:space-between;
+align-items:center;
+padding:15px 6%;
+}
+
+/* show icon */
+
+.menu-icon{
+display:block;
+}
+
+/* hide menu */
+
+nav ul{
+position:absolute;
+top:65px;
+left:0;
+width:100%;
+background:#0b1120;
+flex-direction:column;
+align-items:center;
+gap:22px;
+padding:30px 0;
+display:none;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* show menu */
+
+nav ul.active{
+display:flex;
+}
+
+}
+
     
 </style>
 </head>
@@ -573,14 +624,23 @@ nav ul li a{
 <body>
 
 <nav>
-<ul>
+
+<ul id="menu">
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#research">Research</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+
+<div class="menu-icon">
+<i class="fa-solid fa-bars"></i>
+</div>
+
 </nav>
+
+
+    
 
 <!-- HERO -->
 <section class="hero fade-in">
@@ -880,6 +940,16 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer){
 
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
+});
+
+
+/* HAMBURGER MENU */
+
+const menuIcon = document.querySelector(".menu-icon");
+const menu = document.querySelector("#menu");
+
+menuIcon.addEventListener("click", () => {
+    menu.classList.toggle("active");
 });
 
 </script>
